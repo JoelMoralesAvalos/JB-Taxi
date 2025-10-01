@@ -1,4 +1,6 @@
 <script>
+	import Bosses from "$lib/Components/bosses.svelte";
+	import Employeers from "$lib/Components/employeers.svelte";
 	let email = '';
 	let password = '';
 	let loggedIn = false;
@@ -54,15 +56,9 @@
 	</div>
 	{:else}
 		{#if userType === 'chef'}
-			<h1>Chefsdashboard</h1>
-			<div>
-				<h2>Hantera förare</h2>
-			</div>
+			<Bosses/>
 		{:else}
-			<h1>Förares dashboard</h1>
-			<div>
-				<h2>Mina pass</h2>
-			</div>
+			<Employeers />
 		{/if}
 	
 	<button on:click={() => loggedIn = false}>Logga ut</button>

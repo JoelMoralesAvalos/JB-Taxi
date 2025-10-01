@@ -1,5 +1,5 @@
 <script>
-	import Bosses from "$lib/Components/bosses.svelte";
+	import Bosses from "$lib/Components/bosses.svelte"
 	import Employeers from "$lib/Components/employeers.svelte";
 	let email = '';
 	let password = '';
@@ -23,7 +23,7 @@
 	
 	function handleLogin() {
 		if (canLogin) {
-			const user = users["chef@taxi.se"];
+			const user = users["foreare1@taxi.se"];
 
 			if (user && user.password === password) {
 				loggedIn = true;
